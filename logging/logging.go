@@ -35,11 +35,6 @@ func NewLogger(level ...string) (*Logger, error) {
 		}
 	}
 
-	hostname, err := os.Hostname()
-	if err != nil {
-		fmt.Printf("error getting hostname info, %v", err)
-	}
-
 	var lConfig zap.Config
 
 	lConfig = zap.NewDevelopmentConfig()
